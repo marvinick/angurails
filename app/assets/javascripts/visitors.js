@@ -1,5 +1,3 @@
-
-
 var visitorCenter = angular.module("VisitorCenter", ['ngResource']);
 
 visitorCenter.factory("Visitor", function($resource) {
