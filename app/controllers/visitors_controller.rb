@@ -19,6 +19,6 @@ class VisitorsController < ApplicationController
 private
 
   def visitor_params
-    params.require(:visitor).permit(:first_name, :last_name, :reason)
+    params.require(:visitor).permit(:first_name, :last_name, :reason, :file)
   end
 end

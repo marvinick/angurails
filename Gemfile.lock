@@ -47,6 +47,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    angularjs-file-upload-rails (1.1.6)
     angularjs-rails (1.2.26)
     arel (6.0.3)
     aws-sdk (2.0.22)
@@ -177,6 +178,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angularjs-file-upload-rails (~> 1.1.6)
   angularjs-rails (~> 1.2.25)
   aws-sdk
   bootstrap-sass (~> 3.2.0.2)

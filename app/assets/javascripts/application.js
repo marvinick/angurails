@@ -15,5 +15,6 @@
 //= require turbolinks
 //= require angular
 //= require angular-resource
+//= require angularjs-file-upload
 //= require bootstrap-sprockets
 //= require_tree .

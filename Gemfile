@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'dotenv-rails', groups: [:development]
 gem 'aws-sdk'
+gem 'angularjs-file-upload-rails', '~> 1.1.6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

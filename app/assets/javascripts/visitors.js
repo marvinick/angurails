@@ -1,4 +1,4 @@
-var visitorCenter = angular.module("VisitorCenter", ['ngResource']);
+var visitorCenter = angular.module("VisitorCenter", ['ngResource', 'angularFileUpload']);
 
 visitorCenter.factory("Visitor", function($resource) {
   return $resource("visitors/:id", { id: '@id' }, {
@@ -7,7 +7,7 @@ visitorCenter.factory("Visitor", function($resource) {
   });
 })
 
-visitorCenter.controller("visitorsController", function($scope, Visitor) {
+visitorCenter.controller("visitorsController", function($scope, Visitor, FileUploader) {
     $scope.visitors = Visitor.index()
 
     $scope.addVisitor = function() {
@@ -21,4 +21,6 @@ visitorCenter.controller("visitorsController", function($scope, Visitor) {
       Visitor.delete(visitor)
       $scope.visitors.splice(index, 1);
     }
+
+    $scope.uploader = new FileUploader({url: ''});
 })
