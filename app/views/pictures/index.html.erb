@@ -3,7 +3,7 @@
     <div class="col-md-12">
       <% @pictures.each do |picture| %>
         <%= picture.title %>
-        <%= image_tag picture.image_url.to_s %>
+        <%= image_tag picture.image_url(:thumb).to_s %>
       <% end %>
     </div>
   </div>
