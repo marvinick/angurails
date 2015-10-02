@@ -1,15 +1,15 @@
 <div class="container">
 
 <h1 class="page-header" >Painting Gallery</h1>
-    <div class="row">
-      <% @pictures.each do |picture| %>
-        <div class="col-md-6">
-          <ul>
-            <%= picture.title %>
-            <%= image_tag picture.image_url(:thumb).to_s %>
-          </ul>
-        </div>
-      <% end %>
+<div id="paintings">
+<%= render @paintings %>
+</div>
+<div class="clear"></div>
+
+<%= direct_upload_form_for @uploader do |f| %>
+<p><%= f.file_field :image %></p>
+<p><%= f.submit "Upload Image" %></p>
+<% end %>
     </div>
 
   <div class="clear"></div>
