@@ -7,4 +7,19 @@ class Picture < ActiveRecord::Base
   def image_name
     File.basename(image.path || image.filename) if image
   end
+
+  def enqueue_image
+    ImageWorker.perform_async(id, key) if key.present?
+  end
+
+  class ImageWorker
+    include Sidekiq::Worker
+
+    def perform(id, key)
+      picture = Painting.find(id)
+      picture.key = key
+      picture.remote_image_url = picture.image.direct_fog_url(with_path: true)
+      picture.save!
+    end
+  end
 end
