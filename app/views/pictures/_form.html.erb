@@ -1,5 +1,5 @@
 <%= form_for @picture, :html => {:multipart => true} do |f| %>
-
+  <%= f.hidden_field :key %>
 
   <p>
     <%= f.label :title %><br />
@@ -13,9 +13,7 @@
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </p>
-  <p>
-    <%= f.file_field :image %>
-  </p>
+
   <p>
     <%= f.label :remote_image_url, "or image URL" %>
     <%= f.text_field :remote_image_url %>
