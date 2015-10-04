@@ -16,7 +16,7 @@ class Picture < ActiveRecord::Base
     include Sidekiq::Worker
 
     def perform(id, key)
-      picture = Painting.find(id)
+      picture = Picture.find(id)
       picture.key = key
       picture.remote_image_url = picture.image.direct_fog_url(with_path: true)
       picture.save!
