@@ -1,21 +1,13 @@
 <div class="container">
 
-<h1 class="page-header" >Painting Gallery</h1>
-<div id="paintings">
-<%= render @paintings %>
-</div>
-<div class="clear"></div>
-
-<%= direct_upload_form_for @uploader do |f| %>
-<p><%= f.file_field :image %></p>
-<p><%= f.submit "Upload Image" %></p>
-<% end %>
-    </div>
-
+  <h1 class="page-header" >Painting Gallery</h1>
+  <div id="paintings">
+     <%= render @pictures  %>
+  </div>
   <div class="clear"></div>
   <br>
-  <%= direct_upload_form_for @uploader do |f| %>
-    <p><%= f.file_field :image %></p>
-    <p><%= f.submit "Upload Image", class:"btn btn-default btn-lg" %></p>
-  <% end %>
+    <%= direct_upload_form_for @uploader do |f| %>
+      <p><%= f.file_field :image %></p>
+      <p><%= f.submit "Upload Image", class:"btn btn-default btn-lg" %></p>
+    <% end %>
 </div>
