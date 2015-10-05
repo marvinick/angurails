@@ -1,6 +1,13 @@
-<h1 class="page-header" >Gallery</h1>
-
-<% @pictures.each do |picture| %>
-  <%= image_tag picture.image_url(:thumb).to_s %>
-  <%= link_to picture.title, picture %>
-<% end %>
+<h1>Gallery</h1>
+<%= link_to "new", new_picture_path %>
+<hr>
+<div class="picture">
+  <% @pictures.each do |picture| %>
+    <div class="col-md-3">
+    <ul>
+      <%= image_tag picture.image_url(:thumb).to_s %>
+      <%= link_to picture.title, picture %>
+    </ul>
+  </div>
+  <% end %>
+</div>
