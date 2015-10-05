@@ -20,6 +20,11 @@ class PicturesController < ApplicationController
 
   def edit; end
 
+  def update
+    @picture.update(picture_params)
+    redirect_to pictures_path
+  end
+
   def destroy
     @picture.destroy
     redirect_to pictures_path

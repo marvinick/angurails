@@ -1,4 +1,9 @@
-<%= @picture.title %>
-<%= image_tag @picture.image_url(:show).to_s %>
-
+<h3 class="page-header"><%= @picture.title %></h3>
+<div class="col-lg-7">
+	<%= image_tag @picture.image_url(:show).to_s %>
+</div>
+<div class=col-lg-5">
+	<p>U$ <%= @picture.price %></p>
+	<p><%= @picture.description %></p>
+<br>
 <h4><%= link_to "Edit", edit_picture_path %> || <%= link_to "Delete", picture_path, method: :delete %></h4>
