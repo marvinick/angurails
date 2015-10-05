@@ -15,10 +15,15 @@
  */
 
  body {
-  padding-top: 120px;
+  padding-top: 100px;
+}
 
+.container {
+    font-family: "Courier New", Times, serif;
  }
 
- .container {
-    font-family: "Courier New", Times, serif;
+ nav li {
+   float: left;
+   list-style-type: none;
+   margin-left: 15px;
  }

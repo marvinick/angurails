@@ -1,4 +1,5 @@
 class PicturesController < ApplicationController
+  before_action :set_picture, only: [:show, :edit, :update, :destroy]
 
   def index
     @pictures = Picture.all
@@ -15,10 +16,23 @@ class PicturesController < ApplicationController
      redirect_to pictures_path
   end
 
+  def show; end
+
+  def edit; end
+
+  def destroy
+    @picture.destroy
+    redirect_to pictures_path
+  end
+
   private
 
   def picture_params
     params.require(:picture).permit(:title, :price, :description, :image, :remote_image_url)
+  end
+
+  def set_picture
+    @picture = Picture.find(params[:id])
   end
 
 end
