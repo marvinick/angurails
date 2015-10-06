@@ -9,11 +9,20 @@ class PicturesController < ApplicationController
     @picture = Picture.new
   end
 
-  def create
-    @picture = Picture.new(picture_params)
+  # def create
+  #   @picture = Picture.new(picture_params)
+  #
+  #   @picture.save
+  #    redirect_to pictures_path
+  # end
 
-    @picture.save
-     redirect_to pictures_path
+  def create
+    @picture = Picture.new(image: params[:file])
+    if @picture.save!
+      respond_to do |format|
+        format.json{ render :json => @picture }
+      end
+    end
   end
 
   def show; end
