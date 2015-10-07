@@ -14,7 +14,7 @@
  *= require_self
  *= require dropzone/dropzone
  */
- 
+
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -36,4 +36,20 @@
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
+}
+
+.navbar-inverse {
+    background-color: white;
+    border-color: #F4F4F4;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0.9;
+}
+
+.navbar-default {
+    background-color: black;
+    border-color: #F4F4F4;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0.9;
 }

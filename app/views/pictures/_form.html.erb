@@ -1,6 +1,5 @@
 <%= form_for @picture, :html => {:multipart => true} do |f| %>
 
-
   <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
@@ -11,10 +10,13 @@
   </p>
   <p>
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description, :cols => "40", :rows => "5" %>
   </p>
-  <p>
-    <%= f.file_field :image %>
-  </p>
-  <p><%= f.submit %></p>
+
+ <p>
+   <%= f.file_field :image %>
+ </p>
+
+ <br>
+  <p><%= f.button :submit, class:"btn btn-default btn-lg" %></p>
 <% end %>
