@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :pictures
 
   resources :media_contents
+  delete 'delete_media', to: "media_contents#delete_media"
 end

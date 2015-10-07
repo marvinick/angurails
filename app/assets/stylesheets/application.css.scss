@@ -11,9 +11,12 @@
  * file per style scope.
  *
  *= require_tree .
- *= require dropzone/dropzone
  *= require_self
+ *= require dropzone/dropzone
  */
+ 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
  body {
   padding-top: 100px;
