@@ -9,20 +9,15 @@ class PicturesController < ApplicationController
     @picture = Picture.new
   end
 
-  # def create
-  #   @picture = Picture.new(picture_params)
-  #
-  #   @picture.save
-  #    redirect_to pictures_path
-  # end
-
   def create
-    @picture = Picture.new(image: params[:file])
-    if @picture.save!
-      respond_to do |format|
-        format.json{ render :json => @picture }
-      end
-    end
+  	@picture = Picture.create(picture_params)
+  	if @picture.save
+  	  render json: { message: "success" }, :status => 200
+  	else
+  	  #  you need to send an error header, otherwise Dropzone
+          #  will not interpret the response as an error:
+  	  render json: { error: @picture.errors.full_messages.join(',')}, :status => 400
+  	end
   end
 
   def show; end

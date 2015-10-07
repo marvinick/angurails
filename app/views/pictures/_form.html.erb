@@ -1,9 +1,8 @@
-<%= form_tag '/pictures', method: :post, class: "dropzone", id: "media-dropzone" do %>
-  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+<%= form_for(@picture, html: { multipart: true, class: "dropzone"}) do |f|  %>
   <div class="fallback">
-    <%= file_field_tag "media", multiple: true%>
+    <%= f.file_field :image %><br>
+    <%= f.submit "Upload" %>
   </div>
-
 <% end %>
+
 <br>
-<%= button_tag 'Upload file', class: 'btn btn-small btn-primary btn-remove-file', id: 'submit-all' %>

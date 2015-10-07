@@ -18,27 +18,3 @@
 //= require bootstrap-sprockets
 //= require dropzone
 //= require_tree .
-
-$(function() {
-  var mediaDropzone;
-  mediaDropzone = new Dropzone("#media-dropzone");
-  return mediaDropzone.on("success", function(file, responseText) {
-    var _this = this;
-    appendContent(responseText.image.url, responseText.id);
-    setTimeout(function(){
-      $('#myModal').modal('hide');
-      _this.removeAllFiles();
-    },1000);
-  });
-});
-
-var appendContent = function(imageUrl, pictureId) {
-  $("#media-contents").append('<div class="col-lg-4">' +
-    '<div class="thumbnail"><img src="' + imageUrl + '"/>' +
-    '<div class="caption">' +
-    '<input id="media_contents_" name="media_contents[]" value="' + pictureId +'" type="checkbox">' +
-    '</div>' +
-    '</div></div>');
-  $("#delete").removeAttr('disabled');
-  $("#no-media").html("");
-};
