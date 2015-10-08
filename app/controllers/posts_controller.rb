@@ -11,14 +11,15 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post = Post.save
+    @post.save
     redirect_to posts_path
   end
 
   def show; end
 
   def destroy
-    Post.destroy(params[:id])
+    @post.destroy
+    redirect_to posts_path
   end
 
 private
@@ -27,6 +28,6 @@ private
   end
 
   def set_post
-    @post = Post.find(:id)
+    @post = Post.find(params[:id])
   end
 end
