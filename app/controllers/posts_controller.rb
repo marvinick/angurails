@@ -1,19 +1,22 @@
 class PostsController < ApplicationController
-  respond_to :json
+
 
   def index
-    respond_to do |format|
-      format.json { render json: Picture.all }
-      format.html
-    end
+    @posts = Post.all
+  end
+
+  def new
+    @post = Post.new
   end
 
   def create
-    respond_with Post.create(post_params)
+    @post = Post.new(post_params)
+    @post = Post.save
+    redirect_to posts_path
   end
 
   def destroy
-    respond_with Post.destroy(params[:id])
+    Post.destroy(params[:id])
   end
 
 private

@@ -16,5 +16,4 @@
 //= require angular
 //= require angular-resource
 //= require bootstrap-sprockets
-//= require dropzone
 //= require_tree .

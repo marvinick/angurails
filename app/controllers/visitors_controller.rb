@@ -4,7 +4,7 @@ class VisitorsController < ApplicationController
   def index
     respond_to do |format|
       format.json { render json: Visitor.all }
-      format.html
+      format.html { Visitor.all } 
     end
   end
 
@@ -19,6 +19,6 @@ class VisitorsController < ApplicationController
 private
 
   def visitor_params
-    params.require(:visitor).permit(:first_name, :last_name, :reason, :file)
+    params.require(:visitor).permit(:first_name, :last_name, :reason)
   end
 end
