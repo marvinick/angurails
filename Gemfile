@@ -27,7 +27,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'therubyracer'
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-google'
+gem "omniauth-google-oauth2"
 
 group :development, :test do
   gem 'byebug'
