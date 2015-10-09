@@ -15,7 +15,9 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
-  def show; end
+  def show
+    @picture = Picture.new
+  end
 
   def destroy
     @post.destroy

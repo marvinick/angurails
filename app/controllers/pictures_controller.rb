@@ -10,7 +10,8 @@ class PicturesController < ApplicationController
   end
 
   def create
-   @picture = Picture.new(picture_params)
+   @post = Post.find(params[:post_id])
+   @picture = post.pictures.build(picture_params)
 
    @picture.save
     redirect_to pictures_path

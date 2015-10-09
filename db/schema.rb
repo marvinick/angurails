@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151008214602) do
+ActiveRecord::Schema.define(version: 20151009014056) do
 
   create_table "media", force: :cascade do |t|
     t.string   "file_name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20151008214602) do
     t.text    "description"
     t.decimal "price"
     t.boolean "image_processed"
+    t.integer "post_id"
   end
 
   create_table "posts", force: :cascade do |t|
