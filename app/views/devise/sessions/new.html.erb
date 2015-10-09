@@ -4,6 +4,11 @@
   <div class="col-md-1"></div>
   <div class="col-lg-4">
     <center>
+      <%= render "devise/shared/omni" %>
+      <br>
+      
+      <h3>OR</h3>
+      <br>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.email_field :email, autofocus: true, placeholder:"enter email" %>
