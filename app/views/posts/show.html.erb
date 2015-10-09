@@ -6,8 +6,10 @@
 		<%= @post.description %>
 		<% @post.pictures.each do |picture| %>
 			<ul>
-				<%= image_tag picture.image_url(:thumb).to_s %>
-				<%= picture.title %>
+				<div class="col-md-3">
+					<%= link_to (image_tag picture.image_url(:thumb).to_s), picture %>
+					<%= picture.title %>
+				</div>
 			</ul>
 		<% end %>
 
