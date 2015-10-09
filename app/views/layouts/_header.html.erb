@@ -25,7 +25,10 @@
                   <%= link_to "Galleries", pictures_path %>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Sign In</a>
+                  <%= link_to "Sign in", user_omniauth_authorize_path(:google_oauth2) %>
+                </li>
+                <li>
+                  <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
                 </li>
                 <li>
                     <%= link_to "Posts", posts_path %>
