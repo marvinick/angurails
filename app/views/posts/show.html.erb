@@ -4,30 +4,29 @@
 		<%= link_to "Edit", edit_post_path %> | | <%= link_to "Delete", post_path, method: :delete %> | | <%= link_to "Back", :back %>
 		<hr>
 		<%= @post.description %>
+		<% @post.pictures.each do |picture| %>
+			<ul>
+				<%= image_tag picture.image_url(:thumb).to_s %>
+				<%= picture.title %>
+			</ul>
+		<% end %>
 
 	</div>
+	<br>
 	<div class="col-md-6">
+		<h4 class="page-header text-center">Add image</h4>
 		<%= form_for [@post, @picture], :html => {:multipart => true} do |f| %>
-
-		  <p>
-		    <%= f.label :title %><br />
-		    <%= f.text_field :title %>
+			<p>
+		    <%= f.text_field :title, placeholder:"title" %>
 		  </p>
 		  <p>
-		    <%= f.label :price %><br />
-		    <%= f.text_field :price %>
+		    <%= f.text_field :price, placeholder:"price" %>
 		  </p>
-		  <p>
-		    <%= f.label :description %><br />
-		    <%= f.text_area :description, :cols => "40", :rows => "5" %>
-		  </p>
-
-		 <p>
-		   <%= f.file_field :image %>
-		 </p>
-
-		 <br>
-		  <p><%= f.button :submit, class:"btn btn-default btn-lg" %></p>
+ 			<p>
+			  <%= f.file_field :image %>
+			</p>
+			<br>
+		  <p><%= f.button :submit, class:"btn btn-default btn-sm" %></p>
 		<% end %>
 	</div>
 </div>
