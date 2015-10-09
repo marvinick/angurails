@@ -21,18 +21,23 @@
                 <li class="hidden">
                     <a class="page-scroll" href="#page-top"></a>
                 </li>
-                <li>
-                  <%= link_to "Galleries", pictures_path %>
-                </li>
+                <% if user_signed_in? %>
+                  <li>
+                    <%= link_to "Galleries", pictures_path %>
+                  </li>
+
+                  <li>
+                    <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
+                  </li>
+                  <li>
+                      <%= link_to "Posts", posts_path %>
+                  </li>
+                <% else %>
                 <li>
                   <%= link_to "Sign in", user_omniauth_authorize_path(:google_oauth2) %>
                 </li>
-                <li>
-                  <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
-                </li>
-                <li>
-                    <%= link_to "Posts", posts_path %>
-                </li>
+                <% end %>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
