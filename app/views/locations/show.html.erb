@@ -1,0 +1,13 @@
+<div class="col-md-6">
+	<h2>Location</h2>
+	<p>
+		<strong>Address:</strong>
+		<%= @location.address %>
+		<%= @location.latitude %>
+		<%= @location.longitude %>
+	</p>
+	<p>
+		<%= link_to "Edit", edit_location_path(@location) %> |
+		<%= link_to "Destroy", @location, :confirm => 'Are you sure?', :method => :delete %> |
+		<%= link_to "View All", locations_path %>
+	</p>
