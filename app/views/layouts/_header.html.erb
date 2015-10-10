@@ -25,12 +25,14 @@
                   <li>
                     <%= link_to "Galleries", pictures_path %>
                   </li>
-
-                  <li>
-                    <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
-                  </li>
                   <li>
                       <%= link_to "Posts", posts_path %>
+                  </li>
+                  <li>
+                    <%= link_to "Places", locations_path %>
+                  </li>
+                  <li>
+                    <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
                   </li>
                 <% else %>
                 <li>
