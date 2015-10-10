@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151010021430) do
+ActiveRecord::Schema.define(version: 20151010191121) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "address"
@@ -34,6 +34,16 @@ ActiveRecord::Schema.define(version: 20151010021430) do
     t.decimal "price"
     t.boolean "image_processed"
     t.integer "post_id"
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string   "name"
+    t.string   "state"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.boolean  "gmaps"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "posts", force: :cascade do |t|

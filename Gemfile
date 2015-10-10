@@ -26,6 +26,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 #location
 gem 'geocoder'
+gem 'gmaps4rails'
 
 #authentication
 gem 'therubyracer'
