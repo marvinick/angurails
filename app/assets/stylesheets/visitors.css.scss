@@ -17,9 +17,13 @@
   color: white;
 }
 
+.row {
+  font-family: "Courier New", Times, serif;
+}
+
 .box {
   background-color: white;
-  background: image-url('garden.jpg');
+  background: image-url('healthy.jpg');
   width: auto;
   height: 300px;
   padding: 10px;
@@ -34,7 +38,7 @@
 
 .box2 {
   background-color: white;
-  background: image-url('iron-man.jpg');
+  background: image-url('garden.jpg');
   width: auto;
   height: 200px;
   padding: 10px;
