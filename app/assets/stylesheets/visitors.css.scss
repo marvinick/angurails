@@ -1,0 +1,40 @@
+// Place all the styles related to the Visitors controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+  color: inherit;
+  text-align: center;
+  height: 400px;
+  background: image-url('garden2.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.jumbotron h2 {
+  color: white;
+}
+
+.box {
+  background-color: white;
+  width: auto;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 30px;
+}
+
+.box h3 {
+  padding-top: 10px;
+  font-family: "Courier New", Times, serif;
+}
+
+.box2 {
+  background-color: white;
+  width: auto;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 30px;
+}

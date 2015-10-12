@@ -21,44 +21,38 @@
   padding-top: 90px;
 }
 
-.jumbotron {
-  color: inherit;
-  text-align: center;
-  height: 400px;
-  background: image-url('iron-man.jpg');
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
-
 .container {
   font-family: "Courier New", Times, serif;
  }
 
- nav li {
-   float: left;
-   list-style-type: none;
-   margin-left: 15px;
- }
+nav li {
+ float: left;
+ list-style-type: none;
+ margin-left: 15px;
+}
 
- img {
+.nav.navbar-nav li a {
+    color: black;
+}
+
+img {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
 }
 
 .navbar-inverse {
-    background-color: white;
-    z-index: 1000;
-    overflow: hidden;
-    opacity: 0.9;
+  background-color: #A2CD5A;
+  z-index: 1000;
+  overflow: hidden;
+  opacity: 0.7;
 }
 
 .navbar-default {
-    background-color: black;
-    z-index: 1000;
-    overflow: hidden;
-    opacity: 0.9;
+  background-color: #F5FFFA;
+  z-index: 1000;
+  overflow: hidden;
+  opacity: 0.9;
 }
 
 #map-container {
