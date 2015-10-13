@@ -4,7 +4,11 @@ class Post < ActiveRecord::Base
 	belongs_to :user
 	has_many :pictures
 
-	after_validation :generate_slug
+ before_save :generate_slug
+
+	def to_param
+		self.slug
+	end
 
 	def generate_slug
 		self.slug = self.title.gsub(" ", "-").downcase
