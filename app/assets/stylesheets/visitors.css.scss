@@ -5,8 +5,8 @@
 .jumbotron {
   color: inherit;
   text-align: center;
-  height: 400px;
-  background: image-url('garden2.jpg');
+  height: 575px;
+  background: image-url('planthd.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,6 +15,7 @@
 
 .jumbotron h1 {
   color: white;
+  padding-top: 40px;
 }
 
 .row {
