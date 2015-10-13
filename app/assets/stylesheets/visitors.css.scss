@@ -6,7 +6,7 @@
   color: inherit;
   text-align: center;
   height: 575px;
-  background: image-url('planthd.jpg');
+  background: image-url('plantrobot.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,13 +22,25 @@
   font-family: "Courier New", Times, serif;
 }
 
+.row h3 {
+  color: white;
+}
+
 .box {
   background-color: white;
-  background: image-url('healthy.jpg');
+  background: image-url('urban_garden.jpg');
   width: auto;
   height: 300px;
   padding: 10px;
-  border: 1px solid black;
+  margin: 30px;
+}
+
+.box-right {
+  background-color: white;
+  background: image-url('tools2.jpg');
+  width: auto;
+  height: 300px;
+  padding: 10px;
   margin: 30px;
 }
 
@@ -37,12 +49,33 @@
   font-family: "Courier New", Times, serif;
 }
 
-.box2 {
+.box2-left {
   background-color: white;
-  background: image-url('garden.jpg');
+  background: image-url('cool_garden.jpg');
   width: auto;
   height: 200px;
   padding: 10px;
-  border: 1px solid black;
   margin: 30px;
+}
+
+.box2-center {
+  background-color: white;
+  background: image-url('breeze-garden.jpg');
+  width: auto;
+  height: 200px;
+  padding: 10px;
+  margin: 30px;
+}
+
+.box2-right {
+  background-color: white;
+  background: image-url('garden-party.jpg');
+  width: auto;
+  height: 200px;
+  padding: 10px;
+  margin: 30px;
+}
+
+footer {
+  background-color: #F5FFFA;
 }

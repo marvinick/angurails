@@ -7,9 +7,9 @@ class Picture < ActiveRecord::Base
 
   before_save :generate_slug
 
-  def to_param
-    self.slug
-  end
+  # def to_param
+  #   self.slug
+  # end
 
   def generate_slug
     self.slug = self.title.gsub(" ", "-")

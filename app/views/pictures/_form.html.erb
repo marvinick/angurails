@@ -1,22 +1,11 @@
-<%= form_for @picture, :html => {:multipart => true} do |f| %>
+<%= simple_form_for @picture, :html => {:class => 'form-signin'} do |f| %>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description, :cols => "40", :rows => "5" %>
-  </p>
-
- <p>
-   <%= f.file_field :image %>
- </p>
-
- <br>
-  <p><%= f.button :submit, class:"btn btn-default btn-lg" %></p>
+ <%= f.error_notification %>
+  <%= f.input :title, label: false, placeholder: "title", input_html: {class: "form-control"} %>
+  <%= f.input :price, label: false, placeholder: "price", input_html: {class: "form-control"} %>
+  <%= f.file_field :image %>
+  <br>
+  <%= f.button :submit, class:"btn btn-info btn-lg" %>
 <% end %>
+ 
+

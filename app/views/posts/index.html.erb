@@ -1,11 +1,13 @@
-<h1 class="text-center">Posts</h1>
-<%= link_to "New", new_post_path %>
-<hr>
-<div class="row">
-  <div class="col-md-6">
-    <% @posts.each do |post| %>
-      <h4><%= link_to post.title, post %></h4>
-    <% end %>
+<div class="post">
+  <h1 class="text-center">Posts</h1>
+  <%= link_to "New", new_post_path %>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <% @posts.each do |post| %>
+        <h4><%= link_to post.title, post %></h4>
+      <% end %>
+    </div>
   </div>
 </div>
-<br>
+  <br>
