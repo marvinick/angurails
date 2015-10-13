@@ -4,7 +4,7 @@
 		<%= link_to "Edit", edit_post_path %> | | <%= link_to "Delete", post_path, method: :delete %> | | <%= link_to "Back", :back %>
 		<hr>
 		<%= @post.description %>
-		<% @post.pictures.each do |picture| %>
+		<% @post.reload.pictures.each do |picture| %>
 			<ul>
 				<div class="col-md-3">
 					<%= link_to (image_tag picture.image_url(:thumb).to_s), picture %>
