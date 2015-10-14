@@ -6,7 +6,7 @@
   color: inherit;
   text-align: center;
   height: 575px;
-  background: image-url('plantrobot.jpg');
+  background: image-url('blurred.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -23,6 +23,10 @@
 }
 
 .row h3 {
+  color: white;
+}
+
+.row h4 {
   color: white;
 }
 
@@ -76,6 +80,7 @@
   margin: 30px;
 }
 
-footer {
+.footer {
   background-color: #F5FFFA;
 }
+
