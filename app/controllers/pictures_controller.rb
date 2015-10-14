@@ -3,7 +3,8 @@ class PicturesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @pictures = Picture.all
+    @user = current_user
+    @pictures = current_user.pictures
   end
 
   def new
@@ -12,8 +13,13 @@ class PicturesController < ApplicationController
 
   def create
    @picture = Picture.new(picture_params)
-   @picture.save
-    redirect_to pictures_path
+   @picture.user_id = current_user.id if current_user
+
+    if @picture.save
+      redirect_to pictures_path
+    else
+      render :new
+    end
   end
 
   def show; end
@@ -33,7 +39,7 @@ class PicturesController < ApplicationController
   private
 
   def picture_params
-    params.require(:picture).permit(:title, :price, :description, :image, :remote_image_url)
+    params.require(:picture).permit(:title, :price, :description, :image, :user_id, :remote_image_url)
   end
 
   def set_picture

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013034610) do
+ActiveRecord::Schema.define(version: 20151014221634) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "address"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20151013034610) do
     t.boolean "image_processed"
     t.integer "post_id"
     t.string  "slug"
+    t.integer "user_id"
   end
 
   create_table "places", force: :cascade do |t|
