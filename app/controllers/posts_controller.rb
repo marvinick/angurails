@@ -32,6 +32,6 @@ private
   end
 
   def set_post
-    @post = Post.find_by slug: params[:id]
+    @post = Post.find(params[:id])
   end
 end

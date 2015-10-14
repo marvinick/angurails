@@ -11,7 +11,7 @@ class PicturesController < ApplicationController
   end
 
   def create
-   @post = Post.find_by slug: params[:post_id]
+   @post = Post.find(params[:id])
    @picture = @post.pictures.build(picture_params)
    @picture.save
     redirect_to post_path(@post)

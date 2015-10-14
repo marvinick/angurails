@@ -5,7 +5,7 @@ class Picture < ActiveRecord::Base
   belongs_to :post
   mount_uploader :image, ImageUploader
 
-  before_save :generate_slug
+  # before_save :generate_slug
 
   # def to_param
   #   self.slug
