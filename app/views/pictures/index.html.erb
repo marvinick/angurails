@@ -1,13 +1,25 @@
-<h1>Gallery</h1>
-<%= link_to "new", new_picture_path %>
-<hr>
-<div class="picture">
-  <% @pictures.each do |picture| %>
-    <div class="col-md-3">
-    <ul>
-      <%= link_to (image_tag picture.image_url(:thumb).to_s), picture %>
-      <%= link_to picture.title, picture %>
-    </ul>
-  </div>
-  <% end %>
+
+<div class="row">
+	<div class="col-md-2">
+		<ul>
+			<h4 class="text-center"><%= link_to current_user.email, edit_user_registration_path %></h4>
+		</ul>
+	</div>
+	<div class="col-md-1"></div>
+	<div class="col-md-9">
+		<h4 class="text-center">Listings</h4>
+		<h6 class="text-center"><%= link_to "Add Post", new_picture_path %></h6>
+		<hr>
+		
+		<% @pictures.each do |picture| %>
+	    <ul>
+	      <div class="col-md-3">
+		      <%= link_to (image_tag picture.image_url(:thumb).to_s), picture %>
+		      <br>
+		      <h5><%= link_to picture.title, picture %></h5>
+		      <h5>U$ <%= picture.price %></h5>
+		    </div>
+	    </ul>
+	  	<% end %>
+	 </div>
 </div>
