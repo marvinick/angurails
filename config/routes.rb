@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
 
-  resources :visitors, only: [:index, :create, :destroy], defaults: {format: :json}
-  root to: "visitors#index"
+  resources :places
+
+  resources :locations
+  root to: "locations#index" 
 
   resources :posts do
     resources :pictures
@@ -11,6 +13,5 @@ Rails.application.routes.draw do
 
   resources :pictures
 
-  resources :locations
-  resources :places
+  resources :visitors
 end

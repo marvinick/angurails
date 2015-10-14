@@ -1,37 +1,86 @@
-
-  <div class="row">
-    <div class="col-md-12">
-      <p id="notice"><%= notice %></p>
-
-      <%= form_tag locations_path, :method => :get do %>
+<div class="row">
+  <div class="jumbotron">
+    <strong><h1>working garden</h1></strong>
+    <%= form_tag locations_path, :method => :get do %>
         <p>
           <%= text_field_tag :search, params[:search] %>
-          <%= submit_tag "Search Near", :name => nil, class:"btn btn-info" %>
+          <br>
+          <br>
+          <%= submit_tag "Find Location", :name => nil, class:"btn btn-info btn-lg" %>
       <% end %>
+      
+      <br>
+    </form>
+  </div>
 
-      <h1>Locations</h1>
-      <%= link_to 'New Location', new_location_path %>
-      <div class="row">
-        <div class="col-md-11">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Address</th>
-                <th colspan="3"></th>
-              </tr>
-            </thead>
+  <br>
+  <div class="col-md-6">
+    
+    <div class="box">
+     <h3 class="text-center">Locations</h3>
+    </div>
+  </div>
 
-            <tbody>
-              <% @locations.each do |location| %>
-                <tr>
-                  <td><%= link_to location.address, location %></td>
-                  <td><%= link_to 'Show', location %></td>
-                  <td><%= link_to 'Edit', edit_location_path(location) %></td>
-                  <td><%= link_to 'Destroy', location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                </tr>
-              <% end %>
-            </tbody>
-          </table>
-        </div>
+  <div class="col-md-6">
+    
+    <div class="box-right">
+      <h3 class="text-center">Create Neighborhood Event</h3>
+    </div> 
+  </div>
+</div>
+
+<br> 
+
+<div class="row">
+  <div class="col-md-4">
+    
+    <div class="box2-left">
+      <h3 class="text-center">Creative</h3>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    
+    <div class="box2-center">
+      <h3 class="text-center">Places</h3>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    
+    <div class="box2-right">
+      <h3 class="text-center">Places</h3>
+    </div>
+  </div>
+</div>
+
+<br>  
+<br>
+
+
+  <div class="footer">
+    <div class="row">
+      <br>
+      <br>
+      <div class="col-md-4">
+        <p class="text-center">Careers</p>
+        <p class="text-center">Terms</p>
+      </div>
+      <div class="col-md-4">
+        <p class="text-center">About</p>
+        <p class="text-center">Blogs</p>
+      </div>
+      <div class="col-md-4">
+        <p class="text-center">FAQs</p>
       </div>
     </div>
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-center">2015 @Seasalt Labs</p>
+  </div>
+
+<br>
+
+

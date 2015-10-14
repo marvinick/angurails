@@ -3,19 +3,6 @@ class LocationsController < ApplicationController
 
   def index
     @locations = Location.all
-    @geojson = Array.new
-    build_geojson(location, @geojson)
-  end
-
-  respond_to do |format|
-    format.html
-    format.json { render json: @geojson }
-  end
-
-  def build_geojson(locations, geojson)
-    @locations.each do |location|
-      geojson << GeojsonBuilder.build_location(location)
-    end
   end
 
   def show; end

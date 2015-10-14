@@ -11,8 +11,7 @@ class PlacesController < ApplicationController
 			marker.json({:id => place.id })
 			marker.infowindow place.name
 			marker.infowindow render_to_string(:partial => "/places/infowindow", :locals => { :object => place })
-
-    end
+		end
 	end
 
 	def new

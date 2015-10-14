@@ -1,8 +1,11 @@
 <div class="row">
   <div class="jumbotron">
-    <strong><h1>stay busy garden</h1></strong>
-    <form>
-      <input type="text" name="firstname" placeholder="enter location" size="35">
+    <strong><h1>working garden</h1></strong>
+    <% simple_form_for @visitor, :html => {:class => 'form-signin'} do |f| %>
+      <%= f.input :reason, label: false, placeholder: "type location", input_html: {class: "form-control"} %>
+       <%= f.button :submit, class:"btn btn-default btn-lg" %>
+    <% end %>
+      
       <br>
     </form>
   </div>
