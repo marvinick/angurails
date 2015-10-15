@@ -1,6 +1,7 @@
 class PicturesController < ApplicationController
   before_action :set_picture, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :picture_creator, only: [:edit, :update, :destroy]
 
   def index
     @user = current_user
@@ -39,6 +40,12 @@ class PicturesController < ApplicationController
   end
 
   private
+
+  def picture_creator
+    unless @picture.user_id == current_user.id
+      redirect_to root_path
+    end
+  end
 
   def picture_params
     params.require(:picture).permit(:title, :price, :description, :image, :user_id, :remote_image_url)
