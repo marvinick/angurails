@@ -22,7 +22,9 @@ class PicturesController < ApplicationController
     end
   end
 
-  def show; end
+  def show
+    
+  end
 
   def edit; end
 
@@ -45,5 +47,4 @@ class PicturesController < ApplicationController
   def set_picture
     @picture = Picture.find(params[:id])
   end
-
 end

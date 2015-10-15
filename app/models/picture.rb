@@ -1,6 +1,6 @@
 class Picture < ActiveRecord::Base
 
-  validates_presence_of :title
+  validates_presence_of :title, :price, :description
   belongs_to :user
   belongs_to :post
   mount_uploader :image, ImageUploader
